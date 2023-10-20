@@ -1,0 +1,8 @@
+1. Implement missing functions inside base-element-ex-3.ts
+2. Implement missing functions inside button-element-ex-3.ts
+3. Open page (https://demo.playwright.dev/todomvc) inside tests/Excercise_3a_element.spec.ts
+3.1 Use this test to click any button using class created in task 1 and 2
+4. Use before all to open page and after all to close it 
+5. Use other versions of before and after to check how they work
+6. Modify test above to open second page and run the test inside that page
+7*. Try to use context to open tab on the browser

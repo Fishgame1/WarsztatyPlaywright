@@ -102,16 +102,8 @@ const config: PlaywrightTestConfig = {
       },
     },
   ],
-
-  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
-  globalSetup: require.resolve("./engine/config.ts"),
+  globalSetup: require.resolve('./global-setup'),
+  outputDir: 'test-results/',
 };
 
 export default config;
