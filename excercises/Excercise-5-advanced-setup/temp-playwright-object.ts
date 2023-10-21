@@ -7,7 +7,7 @@ export interface Initialization {
   browserName?: string;
 }
 
-export class PlaywrightObject {
+export class TempPlaywrightObject {
   browser?: Browser;
   context?: BrowserContext;
   browserName?: string;
@@ -79,4 +79,4 @@ export class PlaywrightObject {
   }
 }
 
-export default new PlaywrightObject();
+export default new TempPlaywrightObject();

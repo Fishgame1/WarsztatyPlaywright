@@ -21,6 +21,7 @@ touch .eslintignore
 
 # Run eslint check
 npx eslint .
+npx eslint '**/*.{ts,tsx}'
 
 # Install prettier via npm
 npm install --save-dev eslint-config-prettier

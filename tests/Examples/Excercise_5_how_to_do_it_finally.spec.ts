@@ -6,10 +6,6 @@ import { SMOKE_TEST } from "global-setup";
 
 test.describe("Final test", () => {
 
-  test.afterEach(async () => {
-    await playwrightObject.page().close();
-  });
-
   let toDoPage = new ToDoPage();
 
   for (let [index, value] of getTasks().entries()) {

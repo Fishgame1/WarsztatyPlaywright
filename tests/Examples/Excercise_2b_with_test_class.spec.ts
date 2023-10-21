@@ -8,7 +8,7 @@ test.describe("Check toDo page", () => {
     await expect(page).toHaveTitle(/Playwright/);
   });
 
-  for (let [index, value] of [1, 2, 3].entries()) {
+  for (let [index, value] of [101, 2200, 33000].entries()) {
     test(`Get started link ${SMOKE_TEST} ${index}`, async ({ page }) => {
       console.log(value)
       await page.goto("https://playwright.dev/");

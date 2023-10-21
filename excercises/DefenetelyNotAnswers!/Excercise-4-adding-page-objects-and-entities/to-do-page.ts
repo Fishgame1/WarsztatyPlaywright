@@ -1,5 +1,6 @@
 import { InputElement } from "core-capabilities/elements/input-element";
 import { Keys } from "core-capabilities/utils/keys";
+import { ButtonElement } from "excercises/Excercise-3-working-with-browser/button-element-ex-3";
 import { BasePage } from "excercises/Excercise-4-adding-page-objects-and-entities/temp-base-page";
 import { getConfig } from "global-setup";
 import { expect, Page } from "playwright/test";

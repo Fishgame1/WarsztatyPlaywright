@@ -12,12 +12,4 @@ test.describe("Check own button", () => {
     await button.validateElement()
     await page.pause()
   });
-
-  test("Page navigation", async ({ page, context, browser, browserName }) => {
-    console.log(browser.browserType().name())
-    let seconContext = await browser.newContext()
-    let secondPage = await seconContext.pages()
-    context.pages()
-    console.log(browser.version())
-  });
 });

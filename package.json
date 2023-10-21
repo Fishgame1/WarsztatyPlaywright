@@ -29,6 +29,7 @@
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write",
     "prepare": "husky install",
-    "example_tests": "npx playwright test tests --config=playwright.config.ts --workers=1 --headed --project='firefox'"
+    "example_tests": "npx playwright test tests --config=playwright.config.ts --workers=1 --headed --project='firefox'",
+    "example_run": "npx playwright test --grep '@smoke' --config=playwright.config.ts  --project='firefox' --project='Ggole Chrome' --retries=0 --workers=1 --headed"
   }
 }

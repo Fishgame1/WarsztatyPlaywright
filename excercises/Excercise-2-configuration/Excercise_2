@@ -6,7 +6,7 @@
 4. Change testDir or global setup in playwright config and check errors
 5. Change screenshot repository and make the test fail
 6. Add new parameters to global config file
-6. 1 Go back to your branch
+6.1 Go back to your branch
 7. Check only parameter
 8. Check grep parameter when running tests
 9. Use grep on test class name

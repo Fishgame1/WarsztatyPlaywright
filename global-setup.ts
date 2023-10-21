@@ -9,7 +9,7 @@ export class Config {
 
   shouldLogData: boolean = process.env.LOG_DATA ? getEnvironmentVariableAsBoolean(process.env.LOG_DATA) : true;
   appUrl: string = ``;
-  language: Languages = language;
+  language: Languages = Languages.ENGLISH;
   translations: Translation = getTranslations(language);
 
   public static getInstance(): Config {

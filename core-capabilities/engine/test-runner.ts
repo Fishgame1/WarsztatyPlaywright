@@ -8,7 +8,7 @@ export const test = base.extend<{ todoPage: ToDoPage, initNew: void }>({
       playwrightBrowser: browser,
       browserName: browserName,
       apiRequest: playwright.request,
-    });
+    })
     const todoPage = new ToDoPage();
     await testFunction(todoPage);
   },

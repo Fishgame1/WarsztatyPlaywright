@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { waitSeconds } from "core-capabilities/utils/waiter";
 
 test("has title", async ({ page }) => {
   await page.goto("https://playwright.dev/");

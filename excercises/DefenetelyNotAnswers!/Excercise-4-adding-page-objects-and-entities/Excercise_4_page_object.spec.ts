@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Keys } from "core-capabilities/utils/keys";
 import { ToDoPage } from "excercises/DefenetelyNotAnswers!/Excercise-4-adding-page-objects-and-entities/to-do-page";
-import { ToDoEntity } from "../temp-to-do-entity";
+import { ToDoEntity } from "tests/Examples/temp-to-do-entity";
 
 test.describe("Check page object", () => {
 
