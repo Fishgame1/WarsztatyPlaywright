@@ -29,6 +29,6 @@
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write",
     "prepare": "husky install",
-    "example_tests": "npx playwright test tests --config=playwright.config.ts --workers=1 --headed --project='safari'"
+    "example_tests": "npx playwright test tests --config=playwright.config.ts --workers=1 --headed --project='firefox'"
   }
 }
