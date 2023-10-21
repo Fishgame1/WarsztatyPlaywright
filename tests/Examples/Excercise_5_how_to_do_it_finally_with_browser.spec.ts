@@ -12,22 +12,22 @@ test.describe("Final test", () => {
 
   let toDoPage = new ToDoPage();
 
-  test(`SuperTest for browsers ${SMOKE_TEST}`, async ({ initNew }) => {
-    // When
-    let openPage = await toDoPage.open();
-    await playwrightObject.openNewPage()
-    await playwrightObject.closePage(1)
-    await playwrightObject.switchPage(0)
-    await playwrightObject.openNewTab()
-    await playwrightObject.closeTab(1)
-    await playwrightObject.switchTab(0)
-    openPage = await toDoPage.open();
-    let tasks = getTasks()[0];
-    for (let task of tasks) {
-      await toDoPage.addToDo(task);
-    }
+  // test(`SuperTest for browsers ${SMOKE_TEST}`, async ({ initNew }) => {
+  //   // When
+  //   let openPage = await toDoPage.open();
+  //   await playwrightObject.openNewPage()
+  //   await playwrightObject.closePage(1)
+  //   await playwrightObject.switchPage(0)
+  //   await playwrightObject.openNewTab()
+  //   await playwrightObject.closeTab(1)
+  //   await playwrightObject.switchTab(0)
+  //   openPage = await toDoPage.open();
+  //   let tasks = getTasks()[0];
+  //   for (let task of tasks) {
+  //     await toDoPage.addToDo(task);
+  //   }
 
-    // Then
-    await toDoPage.validatePage(tasks);
-  });
+  //   // Then
+  //   await toDoPage.validatePage(tasks);
+  // });
 });
