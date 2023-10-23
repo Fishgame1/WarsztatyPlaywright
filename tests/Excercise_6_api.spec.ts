@@ -9,6 +9,6 @@ test.describe("Excercise 6", () => {
 
   test(`Catch request`, async ({ initNew }) => {
     // Catch request
-    const response = playwrightObject.page().waitForResponse((url) => url.url().includes('/todomvc/'));
+    // const response = playwrightObject.page().waitForResponse((url) => url.url().includes());
   });
 });

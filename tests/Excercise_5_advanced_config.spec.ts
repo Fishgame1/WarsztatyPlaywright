@@ -4,7 +4,7 @@ import { test } from "excercises/Excercise-5-advanced-setup/excercise-5-test-run
 test.describe("Excercise 5", () => {
 
   test.afterEach(async ({}) => {
-    await excercise5PlaywrightObject.page().close()
+    // await excercise5PlaywrightObject.page().close()
   });
   
   test("Here we will test the page object without sending the page", async () => { 
