@@ -2,8 +2,5 @@ import { ExcerciseFourToDoEntity } from "excercises/Excercise-4-adding-page-obje
 
 export const getExcerciseFiveTasks = (): ExcerciseFourToDoEntity[] => {
     return [
-        { taskName: "First one", isCompleted: false },
-        { taskName: "Second one", isCompleted: false },
-        { taskName: "Third one", isCompleted: false }
     ]
 };

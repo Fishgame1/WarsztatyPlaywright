@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
-import { exampleDecoratedSteps } from "excercises/Excercise-2-configuration/step-decorator";
+import { exampleDecoratedSteps } from "excercises-filled/Excercise-2-configuration/step-decorator";
 import { SMOKE_TEST } from "global-setup";
 
 test.describe("Excercise 2 with test class", () => {

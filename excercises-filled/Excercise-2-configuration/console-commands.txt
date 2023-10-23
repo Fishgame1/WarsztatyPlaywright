@@ -1,0 +1,2 @@
+# Run tests
+npx playwright test --grep 'Open to do page' --config=playwright.config.ts  --project="firefox" --retries=0 --workers=1 --headed

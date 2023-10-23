@@ -1,0 +1,8 @@
+1. Implement missing functions inside base-element-ex-3.ts
+2. Implement missing functions inside button-element-ex-3.ts
+3. Open page (https://demo.playwright.dev/todomvc) inside tests/Excercise_3a_element.spec.ts
+4. Add some text into the input and click Enter button (use Keys enum)
+5. User craeted button class to click and then validate Active button 
+6. Use before each to open page and after each to close it 
+7. Add second test that will open second browser and perform actions above inside it
+8*. Try to switch before each/after each to before all/after all to se what happens

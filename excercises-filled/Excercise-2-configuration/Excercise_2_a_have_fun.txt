@@ -1,0 +1,12 @@
+0.1 Commit all the changes (don't push)
+0.2 Start new branch (temp one)
+1. Change timeouts and add waitSeconds() to check errors
+2. Change projects and try to run tests to check errors
+3. Change slowMo parameter and check tests
+4. Change testDir or global setup in playwright config and check errors
+5. Change screenshot repository and make the test fail
+6. Add new parameters to global config file
+6.1 Go back to your branch
+7. Check test.only, test.skip, test.fail, test.fixme, test.slow() parameters
+8. Check grep parameter when running tests
+9. Use grep on test class name 

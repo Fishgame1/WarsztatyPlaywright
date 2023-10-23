@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { Keys } from "core-capabilities/utils/keys";
 import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
-import { ExcerciseThreeButtonElement } from "excercises/Excercise-3-working-with-browser/excercise-3-button-element";
+import { ExcerciseThreeButtonElement } from "excercises-filled/Excercise-3-working-with-browser/excercise-3-button-element";
 
 test.describe("Excercise 3", () => {
 

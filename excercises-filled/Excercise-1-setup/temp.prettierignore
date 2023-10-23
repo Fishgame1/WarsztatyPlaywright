@@ -1,0 +1,9 @@
+node_modules/
+test-results/
+excercises/
+playwright-report
+summary.json
+.vscode/*
+.DS_Store
+Thumbs.db
+{"mode":"full","isActive":false}

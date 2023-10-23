@@ -1,7 +1,7 @@
 import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
-import { ExcerciseFourToDoEntity } from "excercises/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-entity";
-import excercise5PlaywrightObject from "excercises/Excercise-5-advanced-setup/excercise-5-playwright-object";
-import { test } from "excercises/Excercise-5-advanced-setup/excercise-5-test-runner";
+import { ExcerciseFourToDoEntity } from "excercises-filled/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-entity";
+import excercise5PlaywrightObject from "excercises-filled/Excercise-5-advanced-setup/excercise-5-playwright-object";
+import { test } from "excercises-filled/Excercise-5-advanced-setup/excercise-5-test-runner";
 
 test.describe("Excercise 5", () => {
 

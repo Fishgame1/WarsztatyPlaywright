@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
-import { ExcerciseFourToDoPage } from "excercises/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-page";
+import { ExcerciseFourToDoPage } from "excercises-filled/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-page";
 import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
-import { ExcerciseFourToDoEntity } from "excercises/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-entity";
+import { ExcerciseFourToDoEntity } from "excercises-filled/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-entity";
 
 test.describe("Excercise 4", () => {
 

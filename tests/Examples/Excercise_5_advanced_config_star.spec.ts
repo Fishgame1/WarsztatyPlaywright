@@ -1,6 +1,6 @@
-import { getExcerciseFiveTasks } from "excercises/Excercise-5-advanced-setup/excercise-5-data-provider";
-import excercise5PlaywrightObject from "excercises/Excercise-5-advanced-setup/excercise-5-playwright-object";
-import { test } from "excercises/Excercise-5-advanced-setup/excercise-5-test-runner";
+import { getExcerciseFiveTasks } from "excercises-filled/Excercise-5-advanced-setup/excercise-5-data-provider";
+import excercise5PlaywrightObject from "excercises-filled/Excercise-5-advanced-setup/excercise-5-playwright-object";
+import { test } from "excercises-filled/Excercise-5-advanced-setup/excercise-5-test-runner";
 
 test.describe("Excercise 5 additional scenario", () => {
 
