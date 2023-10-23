@@ -40,6 +40,12 @@ export class ToDoPage extends BasePage {
     await this.validateTasks(toDoEntities);
   }
 
+  async addMultipleEntities(toDoEntities: ToDoEntity[]) {
+    for (let entity of toDoEntities) {
+      await this.addToDo(entity)
+    }
+  }
+
   async addToDo(toDoEntity: ToDoEntity) {
     await this.toDoInput.fill(toDoEntity.taskName);
     await playwrightObject.page().locator(this.toDoInput.selector).press(Keys.ENTER);

@@ -4,8 +4,10 @@ import { expect } from "playwright/test";
 import { ExcerciseFourToDoEntity } from "excercises/Excercise-4-adding-page-objects-and-entities/excercise-4-to-do-entity";
 import { ExcerciseFourBasePage } from "excercises/Excercise-4-adding-page-objects-and-entities/excercise-4-base-page";
 import excercise5PlaywrightObject from "./excercise-5-playwright-object";
+import { getConfig } from "global-setup";
 
 const baseSelector = ".todoapp";
+let translation = () => getConfig().translations
 
 export class ExcerciseFiveToDoPage extends ExcerciseFourBasePage {
 
@@ -17,8 +19,8 @@ export class ExcerciseFiveToDoPage extends ExcerciseFourBasePage {
     tabName: string = "React • TodoMVC"
   ) {
     super(excercise5PlaywrightObject.page(), url, tabName, baseSelector);
-    this.title = 'todos'
-    this.activeButton = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', excercise5PlaywrightObject.page(), 'Active')
+    this.title = translation().header
+    this.activeButton = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', excercise5PlaywrightObject.page(), translation().activeButtonLabel)
   }
 
   async open(): Promise<void> {

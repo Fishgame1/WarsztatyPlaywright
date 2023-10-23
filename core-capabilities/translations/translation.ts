@@ -9,6 +9,7 @@ export enum Languages {
 export interface Translation {
   description: string;
   header: string;
+  activeButtonLabel: string;
 }
 
 export const getTranslations = (language: Languages): Translation => {
