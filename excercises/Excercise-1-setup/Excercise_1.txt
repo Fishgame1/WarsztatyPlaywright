@@ -12,5 +12,5 @@
 npm run lint && npm run prettier
 
 9*. Try to commit the changes
-10*. Try to record something with:
+10*. Try to record something (from the https://demo.playwright.dev/todomvc page) with:
 npx playwright codegen
