@@ -27,6 +27,9 @@ npx husky-init && npm install
 # Run all tests
 npx playwright test 
 
+# Start recorder
+npx playwright codegen 
+
 # In case of problems with husky install you might need to craete folder nmp in user path:
 For powershell: 
 mkdir $env:APPDATA\npm
