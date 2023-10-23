@@ -1,16 +1,21 @@
 import { test, expect } from "@playwright/test";
+import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
+import { exampleDecoratedSteps } from "excercises/Excercise-2-configuration/step-decorator";
 import { SMOKE_TEST } from "global-setup";
 
-test.describe("Check toDo page", () => {
+test.describe("Excercise 2 with test class", () => {
 
-  test("has title", async ({ page }) => {
+  test.afterEach(async ({page}) => {
+    await page.close()
+  });
+
+  test(`First test ${SMOKE_TEST}`, async ({ page }) => {
     await page.goto("https://playwright.dev/");
     await expect(page).toHaveTitle(/Playwright/);
   });
 
-  for (let [index, value] of [101, 2200, 33000].entries()) {
-    test(`Get started link ${SMOKE_TEST} ${index}`, async ({ page }) => {
-      console.log(value)
+  for (let [index, value] of ['101', '2200', getRandomString(10)].entries()) {
+    test(`Second test ${index}`, async ({ page }) => {
       await page.goto("https://playwright.dev/");
 
       // Click the get started link.
@@ -22,4 +27,16 @@ test.describe("Check toDo page", () => {
       ).toBeVisible();
     });
   }
+
+  test("One way to decorate steps", async ({ page }) => {
+    await test.step('Decorated steps inside test', async () => {
+      await page.goto("https://playwright.dev/");
+      await expect(page).toHaveTitle(/Playwright/);
+    }); 
+  });
+  
+
+  test("Second way to decorate steps", async ({ page }) => {
+     await exampleDecoratedSteps(page)
+  });
 });

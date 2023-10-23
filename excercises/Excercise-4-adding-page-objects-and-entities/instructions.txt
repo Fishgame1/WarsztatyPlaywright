@@ -1,4 +1,0 @@
-1. Add possibility to add new ToDo inside page object
-2*. Add possibility to validate one button and one todo inside page object
-3. Get header text from translation
-4. Run test using this page object validation method

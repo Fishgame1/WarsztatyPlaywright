@@ -1,13 +1,12 @@
 import { InputElement } from "core-capabilities/elements/input-element";
-import { InputWitWrapper } from "../elements/input-element-with-wrapper";
+import { getConfig } from "global-setup";
 import { TextElement } from "../elements/text-element";
-import { Keys } from "../utils/keys";
 import playwrightObject from "../engine/playwright-object";
 import { ToDoEntity } from "../entities/to-do-entity";
+import { Keys } from "../utils/keys";
 import { BasePage } from "./base-page";
 import { ToDoListElement } from "./elements/to-do-list-element";
 import { FooterElement } from "./elements/to-do-list-footer";
-import { getConfig } from "global-setup";
 
 const baseSelector = ".todoapp";
 const translation = () => getConfig().translations;

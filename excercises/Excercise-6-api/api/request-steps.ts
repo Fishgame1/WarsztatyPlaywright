@@ -1,6 +1,6 @@
-import { ApiHandler } from "core-capabilities/engine/api/request-handler";
+import { ENDPOINTS, HOSTS } from "core-capabilities/steps/api/endpoints";
 import { expect } from "playwright/test";
-import { ENDPOINTS, HOSTS } from "./endpoints";
+import { ApiHandler } from "./request-handler";
 
 export const getToDoPageRequest = async () => {
     let requestParams = {

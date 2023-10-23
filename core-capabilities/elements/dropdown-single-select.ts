@@ -1,5 +1,3 @@
-import { expect } from '@playwright/test';
-import playwrightObject from 'core-capabilities/engine/playwright-object';
 import { BaseElement } from './base-element';
 
 export class DropdownSelect extends BaseElement {

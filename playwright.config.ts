@@ -103,6 +103,8 @@ const config: PlaywrightTestConfig = {
     },
   ],
   globalSetup: require.resolve('./global-setup'),
+  globalTeardown: require.resolve('./global-teardown'),
+
   outputDir: 'test-results/',
 };
 

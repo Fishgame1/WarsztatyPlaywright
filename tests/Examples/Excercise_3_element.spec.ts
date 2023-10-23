@@ -1,52 +1,51 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
 import { Keys } from "core-capabilities/utils/keys";
+import { getRandomString } from "core-capabilities/utils/random/random-string-generator";
+import { ExcerciseThreeButtonElement } from "excercises/Excercise-3-working-with-browser/excercise-3-button-element";
 
-test.describe("Check browser manipulation", () => {
+test.describe("Excercise 3", () => {
 
-  test.beforeAll(async () => {
-     console.log('BEFORE!!')
+  test.beforeEach(async ({page}) => {
+    await page.goto("https://demo.playwright.dev/todomvc");
   });
 
-
-  test.afterEach(async () => {
-    console.log('AFTER!!')
- });
-
-  test("Here we will test the browser manipulation", async ({ page, context, browser, browserName }) => {
-    console.log(browserName)
-    await page.goto("https://demo.playwright.dev/todomvc");
-    await page.locator('[class="new-todo"]').fill('new to do')
-    await page.locator('[class="new-todo"]').press(Keys.ENTER)
-    await page.locator('[class="filters"] li:nth-child(3)').click()
-
-    let newContext = await browser.newContext();
-
-    // New page
-    await newContext.newPage()
-  
-    // Switch page
-    browser.contexts()[1];
-  
-    // Close page
-    await browser?.contexts()[1].close();
+  test.afterEach(async ({page}) => {
+    await page.close()
   });
 
-  test("Here we will test the browser manipulation 2", async ({ page, context, browser, browserName }) => {
+  test("Here we will test the active button", async ({ page }) => {
+    // Given
+    await page.locator('[class="new-todo"]').fill(getRandomString(10))
+    await page.keyboard.press(Keys.ENTER);
+    let button = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', page, 'Active')
+    
+    // When
+    await button.click()
+
+    // Then
+    await button.validateElement()
+  });
+
+  test("Page navigation", async ({ browser, browserName }) => {
+    // Before
+    console.log(browser.browserType().name())
     console.log(browserName)
-    await page.goto("https://demo.playwright.dev/todomvc");
-    await page.locator('[class="new-todo"]').fill('new to do')
-    await page.locator('[class="new-todo"]').press(Keys.ENTER)
-    await page.locator('[class="filters"] li:nth-child(3)').click()
+    console.log(browser.version())
 
-    let newContext = await browser.newContext();
+    let secondContext = await browser.newContext()
+    let secondPage = await secondContext.newPage()
 
-    // New page
-    await newContext.newPage()
-  
-    // Switch page
-    browser.contexts()[1];
-  
-    // Close page
-    await browser?.contexts()[1].close();
+    // Given
+    await secondPage.goto("https://demo.playwright.dev/todomvc");
+    await secondPage.locator('[class="new-todo"]').fill(getRandomString(10))
+    await secondPage.keyboard.press(Keys.ENTER);
+    let button = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', secondPage, 'Active')
+    
+    // When
+    await button.click()
+
+    // Then
+    await button.validateElement()
+    secondPage.close()
   });
 });

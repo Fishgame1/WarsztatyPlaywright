@@ -1,0 +1,4 @@
+1. Add data provider for test with class which will log three different strings (you can use getRandomString() method)
+2. Enclose some lines of code as step and check it inside the report
+3. Move stome steps to separate method inside step-decorator.ts file and decorate them with steps decorator
+ 

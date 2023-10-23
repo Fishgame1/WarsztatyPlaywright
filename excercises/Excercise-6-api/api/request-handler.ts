@@ -11,6 +11,14 @@ export class ApiHandler {
         return new ApiHandler(requestParams);
     }
 
+    public async get(): Promise<APIResponse> {
+        await this.init();
+        return await this.context.get(this.requestParams.url, {
+            headers: this.requestParams.headers,
+            params: this.requestParams.params
+        });
+    }
+
     public async post(): Promise<APIResponse> {
         await this.init();
         return await this.context.post(this.requestParams.url, {

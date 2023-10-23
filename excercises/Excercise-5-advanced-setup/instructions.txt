@@ -1,4 +1,0 @@
-1. Add initialization of toDoPage to temp-test-runner
-2. Use playwright object to get page parameter
-3. Use this test runner to start same test as in point 4
-4*. Check what will happen if you will use initPageIfClosed instead of init new instide test runner (when running multiple tests with data provider)

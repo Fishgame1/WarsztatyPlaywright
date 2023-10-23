@@ -1,15 +1,15 @@
-import { expect } from "@playwright/test";
-import playwrightObject from "../engine/playwright-object";
+import { expect, Page } from "@playwright/test";
 
-export abstract class BasePage {
+export abstract class ExcerciseFourBasePage {
   protected constructor(
+    protected page: Page,
     protected partialUrl?: string,
     protected tabName?: string,
-    public pageSelector?: string
+    public pageSelector?: string,
   ) {}
 
   async openUrl(url: string) {
-    await playwrightObject.open(url);
+    await this.page.goto(url);
   }
 
   async shouldBeOpened() {
@@ -27,32 +27,32 @@ export abstract class BasePage {
   }
 
   async waitForUrl(url: string) {
-    await playwrightObject.page().waitForURL(url);
+    await this.page.waitForURL(url);
   }
 
   async waitForLoadState(state?: "load" | "domcontentloaded" | "networkidle", options?: { timeout?: number }) {
-    await playwrightObject.page().waitForLoadState(state);
+    await this.page.waitForLoadState(state);
   }
 
   async waitForPageSelector() {
     if (!this.pageSelector) {
       throw new Error("You need to specify page selector to be a");
     }
-    await playwrightObject.page().waitForSelector(this.pageSelector);
+    await this.page.waitForSelector(this.pageSelector);
   }
 
   async validateUrl() {
     if (!this.partialUrl) {
       throw new Error("Can't checkUrl because uri is not specified");
     }
-    await playwrightObject.page().waitForURL(this.partialUrl + '/#/');
+    await this.page.waitForURL(this.partialUrl + '/#/');
   }
 
   async validateTabName() {
     if (!this.tabName) {
       throw new Error("Can't checkTitle because title is not specified");
     }
-    const actualTitle = await playwrightObject.page().title();
+    const actualTitle = await this.page.title();
     expect(actualTitle).toEqual(this.tabName);
   }
 }
