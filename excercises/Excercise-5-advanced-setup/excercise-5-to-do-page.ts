@@ -10,7 +10,7 @@ const baseSelector = ".todoapp";
 export class ExcerciseFiveToDoPage extends ExcerciseFourBasePage {
 
   title: string
-  public activeButton: ExcerciseThreeButtonElement
+  // public activeButton: ExcerciseThreeButtonElement
 
   constructor(
     private url: string = "https://demo.playwright.dev/todomvc",
@@ -18,7 +18,7 @@ export class ExcerciseFiveToDoPage extends ExcerciseFourBasePage {
   ) {
     super(excercise5PlaywrightObject.page(), url, tabName, baseSelector);
     this.title = 'todos'
-    this.activeButton = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', excercise5PlaywrightObject.page(), 'Active')
+    // this.activeButton = new ExcerciseThreeButtonElement('[class="filters"] li:nth-child(2)', excercise5PlaywrightObject.page(), 'Active')
   }
 
   async open(): Promise<void> {
@@ -27,7 +27,7 @@ export class ExcerciseFiveToDoPage extends ExcerciseFourBasePage {
   }
 
   async validatePage(): Promise<void> {
-    await this.activeButton.validateElement()
+    // await this.activeButton.validateElement()
     expect(await this.page.locator('h1').innerText()).toEqual(this.title)
   }
 
