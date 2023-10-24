@@ -1,4 +1,5 @@
-1. Add possibility to add new ToDo inside page object
+1. Add possibility to add new ToDo task inside excercise-4-to-do-page.ts page object
 2*. Add possibility to validate one button and one todo inside page object as validate page function
 3. Get header text from translation
 4. Run test using this page object validation method
+5*. Add active button label to translation and use it inside class
