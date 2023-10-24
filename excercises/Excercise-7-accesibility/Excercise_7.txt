@@ -1,2 +1,0 @@
-1. Write any test that will use tab naviagation to click on any button on the page
-2. Run automatic audit for the page
