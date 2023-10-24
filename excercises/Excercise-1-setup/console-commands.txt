@@ -8,7 +8,8 @@ npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugi
 touch .eslintignore
 
 # Run eslint check (DO NOT RUN THIS INSIDE WORKSHOP REPOSITORY)
-npx eslint .
+npx eslint .\
+# or
 npx eslint '**/*.{ts,tsx}'
 
 # Install prettier via npm
@@ -30,7 +31,7 @@ npx playwright test
 # Start recorder
 npx playwright codegen 
 
-# In case of problems with husky install you might need to craete folder nmp in user path:
+# In case of problems with husky install on Windows you might need to craete folder nmp in user path:
 For powershell: 
 mkdir $env:APPDATA\npm
 For cmd:
